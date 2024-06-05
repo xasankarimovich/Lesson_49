@@ -69,6 +69,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
               },
             ),
           ),
+
           [
             // Home Page ===========================================
             Column(
@@ -160,6 +161,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
             // Profile Page ===========================================
             ProfileScreen(),
           ][_selectedIndex],
+
         ],
       ),
       floatingActionButton: _selectedIndex == 0
@@ -183,6 +185,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
               ),
             )
           : null,
+
       bottomNavigationBar: BottomNavigationBar(
         onTap: (value) {
           _selectedIndex = value;
@@ -210,8 +213,9 @@ class _ToDoScreenState extends State<ToDoScreen> {
         ],
       ),
       drawer: CustomDrawer(
-          onThemeChanged: widget.onThemeChanged,
-          onImageChanged: widget.onImageChanged),
+        onThemeChanged: widget.onThemeChanged,
+        onImageChanged: widget.onImageChanged,
+      ),
     );
   }
 }
